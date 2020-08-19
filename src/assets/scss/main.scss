@@ -1,0 +1,379 @@
+@import 'color';
+
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('~@/assets/fonts/Lato/Lato-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url('~@/assets/fonts/Lato/Lato-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('~@/assets/fonts/Pacifico Font/Pacifico.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Lato-Regular', sans-serif;
+}
+
+.head-notification {
+  color: $gray-dark;
+  font-family: 'Lato-Light', sans-serif;
+}
+
+.bg-info-dark {
+  background: $info-dark;
+}
+
+.light-mobile {
+  @media screen and (max-width:768px){
+    font-family: 'Lato-Light', sans-serif;
+  }
+}
+
+.custom-header {
+  padding-bottom: 0;
+
+  .navbar-toggler {
+    border: none;
+    &:focus {
+      outline: none;
+    }
+    .navbar-toggler-icon {
+      background-image: url( 
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+        
+    }
+  }
+
+  #nav-collapse {
+    justify-content: center !important;
+
+    .nav-link {
+      color: $white;
+      font-family: 'Lato-Light', sans-serif;
+      font-size: 1.25rem;
+    }
+
+    .nav-item {
+      padding: 0 10px;
+    }
+
+    .nav-item:hover {
+      .nav-link {
+        color: $blue-info !important;
+      }
+    }
+  }
+
+  @media(min-width: 768px) {
+    .cart-icon {
+      display: none;
+    }
+    &.navbar-expand-md {
+      justify-content: center !important;
+    }
+    .navbar-collapse {
+      flex-grow: 0;
+    }
+
+  }
+}
+
+.custom-carousel {
+  .carousel-caption {
+    text-align: left !important;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 30%;
+    h3 {
+      font-family: 'Pacifico', sans-serif;
+      font-size: 2rem;
+      margin-bottom:1rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-family: 'Lato-Light', sans-serif;
+    }
+    .btn {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      padding-left:20px;
+      padding-right:20px;
+    }
+    @media(max-width: 767px) {
+      top: 10%;
+      h3 {
+        font-size: 1.25rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+      .btn {
+        font-size: 0.5rem;
+      }
+    }
+    @media(max-width: 425px) {
+      top: 0;
+    }
+  }
+}
+
+.custom-card-right {
+
+  
+
+  .card-img-overlay {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: auto;
+    top: 0;
+    left: auto;
+    text-align: left;
+    right:10%;
+    h4 {
+      font-family: 'Pacifico', sans-serif;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 24px;
+      font-family: 'Lato-Light', sans-serif;
+    }
+    .btn {
+      font-size:0.75rem;
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    @media(max-width: 767px) {
+      
+      h4 {
+        font-size: 1.25rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+      .btn {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
+
+.nwsLetter {
+  @media(max-width: 767px) {
+    display: block;
+    margin: 0 auto;
+    height: 20px;
+  }
+}
+
+.custom-card {
+  .card-body {
+    padding: 8px;
+    background: $info-dark;
+    color: $white;
+
+    .card-text {
+      text-align: center;
+      text-transform: capitalize;
+      font-family: 'Pacifico', sans-serif;
+      font-size: 2.125rem;
+
+      @media(max-width: 767px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 19px 2px #b5b5b5;
+
+    .card-text {
+      color: $blue-info;
+    }
+  }
+}
+
+.title {
+  font-family: 'Pacifico', sans-serif;
+  font-size: 1.8rem;
+}
+
+.sub-title {
+  font-family: 'Pacifico', sans-serif;
+  font-size: 1.3rem;
+}
+
+.product-title {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+
+.product-type {
+  font-size: 1rem;
+}
+
+.product-price {
+  font-family: 'Pacifico', sans-serif;
+  color: $info-dark;
+  font-size: 1.6rem;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.VueCarousel-navigation-next::after {
+  content: url('~@/assets/images/Arrow Right.png');
+
+}
+
+.VueCarousel-navigation-prev::after {
+  content: url('~@/assets/images/Arrow Left.png');
+}
+
+.text-center-md {
+  @media(max-width: 767px) {
+    text-align: center;
+  }
+}
+
+@media(max-width: 767px) {
+  .link-box {
+    width: 100%;
+  }
+}
+
+.accordion-md {
+  h6 {
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  @media(max-width: 767px) {
+    h6 {
+      width: 100%;
+    }
+    h6[aria-expanded=false]:after {
+      content: '+';
+      float: right;
+    }
+    h6[aria-expanded=true]:after {
+      content: '-';
+      float: right;
+    }
+
+  }
+
+
+  @media(min-width: 769px) {
+    h6 {
+      pointer-events: none;
+    }
+    .collapse {
+      display: block !important;
+    }
+  }
+
+}
+
+.link-box {
+  @media(max-width: 767px) {
+    flex-direction: column !important;
+  }
+}
+
+.footer-nav {
+  .nav-link {
+    padding: 5px 10px 5px 0 !important;
+    color: $gray-dark;
+    font-family: 'Lato-Light', sans-serif;
+
+    &:hover {
+      color: $blue-info;
+    }
+  }
+}
+
+.bg-dark {
+  background: #000000 !important;
+}
+
+.btn-submit {
+  border: 3px solid $white;
+  background: $info-dark;
+  font-family: 'Pacifico', sans-serif;
+  padding: 0 20px;
+}
+
+.btn-dark {
+  background-color: $btn-dark;
+  border-color: $btn-dark;
+  &:hover {
+    background-color:transparent;
+    color: $btn-dark;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.squared {
+  border-radius: 0 !important;
+}
+
+.social-icon {
+  margin-top: 10px;
+  height: 40px;
+  padding: 10px;
+
+  &:hover {
+    background: $info-dark;
+  }
+}
+
+.carousel-indicators li {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 15px;
+  height: 15px;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+.VueCarousel-slide {
+  .card-body {
+    padding: 10px;
+  }
+}
+
+.shop-btn {
+  background: $info-dark;
+  border: 0;
+}
+
+.VueCarousel-slide .card:hover {
+  box-shadow: 0 0 15px -3px #b5b5b5;
+}
+
+.carousel-indicators li {
+  &:focus {
+    outline: none;
+  }
+}
